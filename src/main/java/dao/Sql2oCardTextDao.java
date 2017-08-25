@@ -38,31 +38,44 @@ public class Sql2oCardTextDao implements CardTextDao {
             System.out.println(ex);
         }
     }
-//    @Override
-//    public void add (CardText CardText) {
-//        String sql = "INSERT INTO cardtext (name, mana, classtype, detail) VALUES (:name, :mana, :classType, cardDetail)";
-//        try (Connection con = sql2o.open()) {
-//            int id = (int) con.createQuery(sql)
-//                    .addParameter("name", CardText.getName())
-//                    .addParameter("mana", CardText.getMana())
-//                    .addParameter("classType", CardText.getClassType())
-//                    .addParameter("cardDetail",CardText.getCardDetail())
-//                    .addColumnMapping("NAME", "name")
-//                    .addColumnMapping("MANA","mana")
-//                    .addColumnMapping("CLASSTYPE", "classtype")
-//                    .addColumnMapping("CARDDETAIL","cardDetail")
-//                    .executeUpdate()
-//                    .getKey();
-//            CardText.setId(id);
-//        }   catch (Sql2oException ex)  {
-//            System.out.println(ex);
-//        }
-//    }
+
     @Override
     public List<CardText> getAll() {
         try ( Connection con = sql2o.open())    {
             return con.createQuery("SELECT * FROM cardtext")
                     .executeAndFetch(CardText.class);
+        }
+    }
+    @Override
+    public CardText findById(int id) {
+        try(Connection con = sql2o.open()) {
+            return con.createQuery("SELECT * FROM cardtext WHERE id = :id")
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(CardText.class);
+        }
+    }
+    @Override
+    public void update (int attack, int health, int mana, int id) {
+        String sql = "UPDATE cardtext SET( attack, health, mana) = (:attack, :health, :mana) WHERE id=:id";
+        try (Connection con = sql2o.open()) {
+             con.createQuery(sql)
+                    .addParameter("attack", attack)
+                    .addParameter("health", health)
+                    .addParameter("mana", mana)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }   catch (Sql2oException ex)  {
+            System.out.println(ex);
+        }
+    }
+    @Override
+    public void deleteById(int id)  {
+        try ( Connection con = sql2o.open())    {
+            con.createQuery("DELETE FROM cardtext WHERE id = :id")
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }   catch (Sql2oException ex)   {
+            System.out.println(ex);
         }
     }
 }

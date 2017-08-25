@@ -15,11 +15,11 @@ public interface CardTextDao {
 
 
     //find
-//    CardText findById(int id);
+    CardText findById(int id);
 //    List<CardText> findAllCardsByCardText(int cardtextId);
     //update
-//    void update(int id, String name, String address, String zipcode, String phone, String website, String email, String image);
+   void update(int id, int mana, int attack, int health);
 
     //delete
-  //  void deleteById(int id);
+    void deleteById(int id);
 }
