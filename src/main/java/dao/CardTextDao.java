@@ -1,19 +1,25 @@
 package dao;
 
-import models.Text;
+
+import models.CardText;
 
 import java.util.List;
 
-/**
- * Created by Guest on 8/25/17.
- */
 public interface CardTextDao {
+    //create
+    void add (CardText cardtext);
+    //   void addCardTextToFoodType(CardText cardtext, Foodtype foodtype);
 
-    void add(Text text);
+    //get all
+    List<CardText> getAll();
 
-    List<Text> getAll();
-//
-//    Text findByName(String name);
-//
-//    Text findByMana(int mana);
+
+    //find
+//    CardText findById(int id);
+//    List<CardText> findAllCardsByCardText(int cardtextId);
+    //update
+//    void update(int id, String name, String address, String zipcode, String phone, String website, String email, String image);
+
+    //delete
+  //  void deleteById(int id);
 }
