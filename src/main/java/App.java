@@ -9,12 +9,13 @@ import org.sql2o.Connection;
  */
 public class App {
     public static void main(String[] args) {
-        Sql2oTextDao sql2oTextDao;
+        Sql2oTextDao textDao;
         Connection conn;
         Gson gson = new Gson();
 
         String connectionString = "jdbc:h2:~/salesify.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString,"","");
+        Sql2o sql2o = new Sql2o(connectionString, "", "");
         textDao = new Sql2oTextDao(sql2o);
         conn = sql2o.open();
+    }
     }

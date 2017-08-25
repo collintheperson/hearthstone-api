@@ -1,7 +1,9 @@
 package dao;
 
+import models.Text;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
@@ -28,6 +30,19 @@ public class Sql2oTextDaoTest {
     @After
     public void tearDown() throws Exception {
         conn.close();
+    }
+
+    @Test
+    public void add_InstantiatesANewCard()  throws Exception    {
+
+    }
+
+    //helper method
+    public static Text setUpNewCard ()  {
+        return new Text(2,5,1,"Priest ","Give +1 attack to minions with more than 4 attack","Direlurk Monkey");
+    }
+    public static Text setUpNewSpell()  {
+        return new Text (8,"Mage","Destroy all minions","Ragnarok");
     }
 
 }
