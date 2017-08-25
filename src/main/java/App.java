@@ -1,5 +1,5 @@
 import com.google.gson.Gson;
-import dao.Sql2oTextDao;
+import dao.Sql2OCardTextDao;
 import org.sql2o.Sql2o;
 import org.sql2o.Connection;
 
@@ -9,13 +9,13 @@ import org.sql2o.Connection;
  */
 public class App {
     public static void main(String[] args) {
-        Sql2oTextDao textDao;
+        Sql2OCardTextDao textDao;
         Connection conn;
         Gson gson = new Gson();
 
         String connectionString = "jdbc:h2:~/salesify.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
-        textDao = new Sql2oTextDao(sql2o);
+        textDao = new Sql2OCardTextDao(sql2o);
         conn = sql2o.open();
     }
     }
