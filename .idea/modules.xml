@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hearthstone.iml" filepath="$PROJECT_DIR$/.idea/modules/hearthstone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hearthstone_main.iml" filepath="$PROJECT_DIR$/.idea/modules/hearthstone_main.iml" group="hearthstone" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hearthstone_test.iml" filepath="$PROJECT_DIR$/.idea/modules/hearthstone_test.iml" group="hearthstone" />
     </modules>
   </component>
 </project>
