@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CardTextDao {
     //create
-    void add (CardText cardtext);
+    void  add(CardText cardtext);
     //   void addCardTextToFoodType(CardText cardtext, Foodtype foodtype);
 
     //get all
