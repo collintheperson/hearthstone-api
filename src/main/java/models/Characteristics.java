@@ -7,6 +7,7 @@ public class Characteristics {
     private int attack;
     private int health;
     private int mana;
+    private int id;
 
     public Characteristics(int mana) {
         this.mana = mana;
@@ -42,6 +43,14 @@ public class Characteristics {
         this.mana = mana;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -51,7 +60,8 @@ public class Characteristics {
 
         if (attack != that.attack) return false;
         if (health != that.health) return false;
-        return mana == that.mana;
+        if (mana != that.mana) return false;
+        return id == that.id;
     }
 
     @Override
@@ -59,6 +69,7 @@ public class Characteristics {
         int result = attack;
         result = 31 * result + health;
         result = 31 * result + mana;
+        result = 31 * result + id;
         return result;
     }
 }

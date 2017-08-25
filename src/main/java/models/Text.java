@@ -30,11 +30,11 @@ public class Text extends Characteristics {
         this.classType = classType;
     }
 
-    public String getText() {
+    public String getCardDetail() {
         return cardDetail;
     }
 
-    public void setText(String cardDetail) {
+    public void setCardDetail(String cardDetail) {
         this.cardDetail = cardDetail;
     }
 
@@ -54,17 +54,17 @@ public class Text extends Characteristics {
 
         Text text = (Text) o;
 
-        if (!classType.equals(text.classType)) return false;
-        if (!cardDetail.equals(text.cardDetail)) return false;
-        return name.equals(text.name);
+        if (classType != null ? !classType.equals(text.classType) : text.classType != null) return false;
+        if (cardDetail != null ? !cardDetail.equals(text.cardDetail) : text.cardDetail != null) return false;
+        return name != null ? name.equals(text.name) : text.name == null;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + classType.hashCode();
-        result = 31 * result + cardDetail.hashCode();
-        result = 31 * result + name.hashCode();
+        result = 31 * result + (classType != null ? classType.hashCode() : 0);
+        result = 31 * result + (cardDetail != null ? cardDetail.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
 }

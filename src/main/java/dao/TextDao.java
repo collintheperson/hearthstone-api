@@ -11,9 +11,9 @@ public interface TextDao {
 
     void add(Text text);
 
-    List<Text> getAll();
-
-    Text findByName(String name);
-
-    Text findByMana(int mana);
+//    List<Text> getAll();
+//
+//    Text findByName(String name);
+//
+//    Text findByMana(int mana);
 }
