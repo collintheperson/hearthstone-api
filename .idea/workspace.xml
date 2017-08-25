@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="656647e6-8b89-4df0-aae5-a5c7841629d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/CardText.java" afterPath="$PROJECT_DIR$/src/main/java/models/CardText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/create.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/create.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/Characteristics.java" afterPath="$PROJECT_DIR$/src/main/java/models/Characteristics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,27 +60,29 @@
       <file leaf-file-name="Characteristics.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Characteristics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+            <state relative-caret-position="352">
+              <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
               <folding>
-                <element signature="e#216#217#0" expanded="true" />
-                <element signature="e#248#249#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#463#464#0" expanded="true" />
-                <element signature="e#504#505#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
-                <element signature="e#570#571#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#676#677#0" expanded="true" />
-                <element signature="e#704#705#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#768#769#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#826#827#0" expanded="true" />
-                <element signature="e#851#852#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#542#543#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#680#681#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#738#739#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+                <element signature="e#917#918#0" expanded="true" />
+                <element signature="e#959#960#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1127#1128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,21 +91,16 @@
       <file leaf-file-name="CardText.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/CardText.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="17" column="105" lean-forward="true" selection-start-line="17" selection-start-column="105" selection-end-line="17" selection-end-column="105" />
+            <state relative-caret-position="210">
+              <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
               <folding>
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
-                <element signature="e#773#774#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-                <element signature="e#852#853#0" expanded="true" />
-                <element signature="e#885#886#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1039#1040#0" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1111#1112#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#569#570#0" expanded="true" />
+                <element signature="e#610#611#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,11 +118,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sql2oCardTextDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sql2oCardTextDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+            <state relative-caret-position="428">
+              <caret line="64" column="53" lean-forward="true" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -146,13 +142,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sql2oCardTextDaoTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sql2oCardTextDaoTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+            <state relative-caret-position="313">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1429#1430#0" expanded="true" />
+                <element signature="e#1489#1490#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -469,23 +467,23 @@
         <option value="$PROJECT_DIR$/src/main/java/models/Priest.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Text.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Characteristics.java" />
         <option value="$PROJECT_DIR$/src/main/java/App.java" />
         <option value="$PROJECT_DIR$/src/test/java/dao/Sql2oTextDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/TextDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/Sql2oTextDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/Sql2OCardTextDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CardTextDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/CardText.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/create.sql" />
         <option value="$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Characteristics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/CardText.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="771" />
-    <option name="y" value="35" />
+    <option name="x" value="974" />
+    <option name="y" value="27" />
     <option name="width" value="1409" />
     <option name="height" value="1106" />
   </component>
@@ -723,7 +721,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sql2oCardTextDaoTest.getAll_RetrieveAllCards">
+  <component name="RunManager" selected="JUnit.Sql2oCardTextDaoTest">
     <configuration default="false" name="build (2)" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="hearthstone" />
       <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
@@ -1061,8 +1059,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest.getAll_RetrieveAllCards" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest.getAll_RetrieveAllCards" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest.add_InstantiatesANewSpell" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.Sql2oCardTextDaoTest.add_InstantiatesANewCard" />
         <item index="4" class="java.lang.String" itemvalue="Groovy.build (2)" />
@@ -1083,15 +1081,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 32m 29s.xml">
-      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 34m 10s.xml">
-      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 34m 51s.xml">
-      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 35m 24s.xml">
       <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
     </history-entry>
@@ -1113,6 +1102,15 @@
     <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 40m 50s.xml">
       <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 41m 00s.xml">
+      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 42m 51s.xml">
+      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sql2oCardTextDaoTest_getAll_RetrieveAllCards - 2017.08.25 at 12h 42m 59s.xml">
+      <configuration name="Sql2oCardTextDaoTest.getAll_RetrieveAllCards" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1124,19 +1122,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="771" y="35" width="1409" height="1106" extended-state="0" />
+    <frame x="974" y="27" width="1409" height="1106" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938856" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32938856" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3362919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3362919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32149902" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1256,29 +1254,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Characteristics.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="54" column="37" lean-forward="false" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        <state relative-caret-position="198">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#826#827#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1293,53 +1274,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="64" column="53" lean-forward="true" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Characteristics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="59" column="37" lean-forward="false" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+          <folding>
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1127#1128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/CardText.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="17" column="105" lean-forward="true" selection-start-line="17" selection-start-column="105" selection-end-line="17" selection-end-column="105" />
+        <state relative-caret-position="210">
+          <caret line="23" column="39" lean-forward="false" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
           <folding>
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#773#774#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1111#1112#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/Sql2oCardTextDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
+        <state relative-caret-position="313">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Sql2oCardTextDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1429#1430#0" expanded="true" />
+            <element signature="e#1489#1490#0" expanded="true" />
           </folding>
         </state>
       </provider>

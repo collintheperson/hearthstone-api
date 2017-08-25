@@ -4,46 +4,29 @@ package models;
  * Created by Guest on 8/25/17.
  */
 public class CardText extends Characteristics {
-    private String classType;
-    private String cardDetail;
-    private String name;
+    private int attack;
+    private int health;
 
-//    public CardText(int mana, String classType, String cardDetail, String name) {
-//        super(mana);
-//        this.classType = classType;
-//        this.cardDetail= cardDetail;
-//        this.name=name;
-//    }
-
-    public CardText(int attack, int health, int mana, String classType, String cardDetail, String name) {
-        super(attack, health, mana);
-        this.classType= classType;
-        this.cardDetail= cardDetail;
-        this.name= name;
+    public CardText(int mana, String classType, String cardDetail, String name, int attack, int health) {
+        super(mana, classType, cardDetail, name);
+        this.attack = attack;
+        this.health = health;
     }
 
-    public String getClassType() {
-        return classType;
+    public int getAttack() {
+        return attack;
     }
 
-    public void setClassType(String classType) {
-        this.classType = classType;
+    public int getHealth() {
+        return health;
     }
 
-    public String getCardDetail() {
-        return cardDetail;
+    public void setAttack(int attack) {
+        this.attack = attack;
     }
 
-    public void setCardDetail(String cardDetail) {
-        this.cardDetail = cardDetail;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     @Override
@@ -54,17 +37,15 @@ public class CardText extends Characteristics {
 
         CardText cardText = (CardText) o;
 
-        if (classType != null ? !classType.equals(cardText.classType) : cardText.classType != null) return false;
-        if (cardDetail != null ? !cardDetail.equals(cardText.cardDetail) : cardText.cardDetail != null) return false;
-        return name != null ? name.equals(cardText.name) : cardText.name == null;
+        if (attack != cardText.attack) return false;
+        return health == cardText.health;
     }
 
     @Override
     public int hashCode() {
         int result = super.hashCode();
-        result = 31 * result + (classType != null ? classType.hashCode() : 0);
-        result = 31 * result + (cardDetail != null ? cardDetail.hashCode() : 0);
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + attack;
+        result = 31 * result + health;
         return result;
     }
 }

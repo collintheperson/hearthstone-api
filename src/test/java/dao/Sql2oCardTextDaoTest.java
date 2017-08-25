@@ -45,7 +45,7 @@ public class Sql2oCardTextDaoTest {
     @Test
     public void getAll_RetrieveAllCards()   throws Exception    {
         CardText card = setUpNewCard();
-        CardText spell = new CardText(2,4,1,"Warrior","+1 Durability to all weapons","Banana Pirate");
+        CardText spell = new CardText(6,"b","c","d",1,5);
         textDao.add(card);
         textDao.add(spell);
         assertEquals(2,textDao.getAll().size());
@@ -53,7 +53,7 @@ public class Sql2oCardTextDaoTest {
 
     //helper methods
     public static CardText setUpNewCard ()  {
-        return new CardText(2,5,1,"Priest ","Give +1 attack to minions with more than 4 attack","Direlurk Monkey");
+        return new CardText(2,"a","b","Priest ",2,5);
     }
 //    public static CardText setUpNewSpell()  {
 //        return new CardText(8,"Mage","Destroy all minions","Ragnarok");

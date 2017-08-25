@@ -4,51 +4,56 @@ package models;
  * Created by Guest on 8/25/17.
  */
 public class Characteristics {
-    private int attack;
-    private int health;
     private int mana;
     private int id;
+    private String classType;
+    private String cardDetail;
+    private String name;
 
-    public Characteristics(int mana) {
+    public Characteristics(int mana, String classType, String cardDetail, String name) {
         this.mana = mana;
-    }
-
-    public Characteristics(int attack, int health, int mana) {
-        this.attack = attack;
-        this.health = health;
-        this.mana = mana;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-
-    public void setHealth(int health) {
-        this.health = health;
+        this.classType = classType;
+        this.cardDetail = cardDetail;
+        this.name = name;
     }
 
     public int getMana() {
         return mana;
     }
 
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
-
     public int getId() {
         return id;
     }
 
+    public String getClassType() {
+        return classType;
+    }
+
+    public String getCardDetail() {
+        return cardDetail;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     public void setId(int id) {
         this.id = id;
+    }
+    public void setMana(int mana) {
+        this.mana = mana;
+    }
+
+    public void setClassType(String classType) {
+        this.classType = classType;
+    }
+
+    public void setCardDetail(String cardDetail) {
+        this.cardDetail = cardDetail;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -58,18 +63,20 @@ public class Characteristics {
 
         Characteristics that = (Characteristics) o;
 
-        if (attack != that.attack) return false;
-        if (health != that.health) return false;
         if (mana != that.mana) return false;
-        return id == that.id;
+        if (id != that.id) return false;
+        if (!classType.equals(that.classType)) return false;
+        if (!cardDetail.equals(that.cardDetail)) return false;
+        return name.equals(that.name);
     }
 
     @Override
     public int hashCode() {
-        int result = attack;
-        result = 31 * result + health;
-        result = 31 * result + mana;
+        int result = mana;
         result = 31 * result + id;
+        result = 31 * result + classType.hashCode();
+        result = 31 * result + cardDetail.hashCode();
+        result = 31 * result + name.hashCode();
         return result;
     }
 }
