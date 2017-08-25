@@ -37,15 +37,15 @@ public class Sql2oCardTextDaoTest {
         CardText card = setUpNewCard();
         assertTrue(card instanceof CardText);
     }
-    @Test
-    public void add_InstantiatesANewSpell() throws Exception    {
-        CardText spell = setUpNewSpell();
-        assertTrue(spell instanceof CardText);
-    }
+//    @Test
+//    public void add_InstantiatesANewSpell() throws Exception    {
+//        CardText spell = setUpNewSpell();
+//        assertTrue(spell instanceof CardText);
+//    }
     @Test
     public void getAll_RetrieveAllCards()   throws Exception    {
         CardText card = setUpNewCard();
-        CardText spell = setUpNewSpell();
+        CardText spell = new CardText(2,4,1,"Warrior","+1 Durability to all weapons","Banana Pirate");
         textDao.add(card);
         textDao.add(spell);
         assertEquals(2,textDao.getAll().size());
@@ -55,8 +55,8 @@ public class Sql2oCardTextDaoTest {
     public static CardText setUpNewCard ()  {
         return new CardText(2,5,1,"Priest ","Give +1 attack to minions with more than 4 attack","Direlurk Monkey");
     }
-    public static CardText setUpNewSpell()  {
-        return new CardText(8,"Mage","Destroy all minions","Ragnarok");
-    }
+//    public static CardText setUpNewSpell()  {
+//        return new CardText(8,"Mage","Destroy all minions","Ragnarok");
+//    }
 
 }

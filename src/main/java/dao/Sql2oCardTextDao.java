@@ -16,21 +16,21 @@ public class Sql2oCardTextDao implements CardTextDao {
 
     @Override
     public void add (CardText cardText) {
-        String sql = "INSERT INTO cardtext (name, attack, mana, classtype, carddetail, health) VALUES (:name, :attack, :mana, :classType, cardDetail, health :)";
+        String sql = "INSERT INTO cardtext ( attack, health, mana, classtype,name,carddetail) VALUES (:attack, :health, :mana, :classType, :name, :cardDetail)";
         try (Connection con = sql2o.open()) {
             int id = (int) con.createQuery(sql)
-                    .addParameter("name", cardText.getName())
                     .addParameter("attack", cardText.getAttack())
+                    .addParameter("health", cardText.getHealth())
                     .addParameter("mana", cardText.getMana())
                     .addParameter("classType", cardText.getClassType())
+                    .addParameter("name", cardText.getName())
                     .addParameter("cardDetail", cardText.getCardDetail())
-                    .addParameter("health", cardText.getHealth())
-                    .addColumnMapping("NAME", "name")
                     .addColumnMapping("ATTACK","attack")
+                    .addColumnMapping("HEALTH","health")
                     .addColumnMapping("MANA","mana")
                     .addColumnMapping("CLASSTYPE", "classtype")
+                    .addColumnMapping("NAME", "name")
                     .addColumnMapping("CARDDETAIL","cardDetail")
-                    .addColumnMapping("HEALTH","health")
                     .executeUpdate()
                     .getKey();
                  cardText.setId(id);
@@ -61,7 +61,7 @@ public class Sql2oCardTextDao implements CardTextDao {
     @Override
     public List<CardText> getAll() {
         try ( Connection con = sql2o.open())    {
-            return con.createQuery("SELECT * FROM text")
+            return con.createQuery("SELECT * FROM cardtext")
                     .executeAndFetch(CardText.class);
         }
     }

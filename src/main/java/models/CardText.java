@@ -8,12 +8,12 @@ public class CardText extends Characteristics {
     private String cardDetail;
     private String name;
 
-    public CardText(int mana, String classType, String cardDetail, String name) {
-        super(mana);
-        this.classType = classType;
-        this.cardDetail= cardDetail;
-        this.name=name;
-    }
+//    public CardText(int mana, String classType, String cardDetail, String name) {
+//        super(mana);
+//        this.classType = classType;
+//        this.cardDetail= cardDetail;
+//        this.name=name;
+//    }
 
     public CardText(int attack, int health, int mana, String classType, String cardDetail, String name) {
         super(attack, health, mana);
