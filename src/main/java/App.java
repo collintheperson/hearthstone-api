@@ -28,7 +28,7 @@ public class App {
 
         //CREATE
         post("/cardtexts/new", "application/json", (req, res) -> {
-            res.type("application/json");
+ //           res.type("application/json");
             CardText cardText = gson.fromJson(req.body(), CardText.class);
             cardTextDao.add(cardText);
             res.status(201);
@@ -36,31 +36,40 @@ public class App {
         });
         //READ
         get("/cardtexts", "application/json", (req, res) -> {
-            res.type("application/json");
+ //           res.type("application/json");
             return gson.toJson(cardTextDao.getAll());//send it back to be displayed
         });
 
         get("/cardtexts/:id", "application/json", (req, res) -> {
-            res.type("application/json");
+  //          res.type("application/json");
             int cardTextId = Integer.parseInt(req.params("id"));
-            res.type("application/json");
+            CardText cardToFind = cardTextDao.findById(cardTextId);
+            if (cardToFind == null){
+                throw new RuntimeException(String.format("No card with the id: %s exists", req.params("id")));
+            }
+   //         res.type("application/json");
             return gson.toJson(cardTextDao.findById(cardTextId));
+        });
+
+        //filter
+
+        exception(ApiException.class, (exc, req, res) -> {
+            RuntimeException err = exc;
+            Map<String, Object> jsonMap = new HashMap<>();
+//            jsonMap.put("status", err.getStatusCode());
+            jsonMap.put("errorMessage", err.getMessage());
+            res.type("application/json");
+//            res.status(err.getStatusCode());
+            res.body(gson.toJson(jsonMap));
+        });
+        after((req, res) ->{
+            res.type("application/json");
         });
     }
 }
-    //        FILTERS
-//    exception(ApiException.class, (exc, req, res) -> {
-//        RuntimeException err = exc;
-//        Map<String, Object> jsonMap = new HashMap<>();
-//            jsonMap.put("status", err.getStatusCode());
-//        jsonMap.put("errorMessage", err.getMessage());
-//        res.type("application/json"); //after does not run in case of an exception.
-//            res.status(err.getStatusCode()); //set the status
-//        res.body(gson.toJson(jsonMap));  //set the output.
-//    });
+
+
 //
-//    after((req, res) ->{
-//        res.type("application/json");
-//    });
+
 //}
 

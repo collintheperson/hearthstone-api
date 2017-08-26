@@ -19,3 +19,5 @@ This project is under the MIT License
 
 ####Screenshots of Postman routes 
 ![Alt text](src/main/resources/public/images/ScreenShot1.png?raw=true "Screen Shot of creating a bunch of instances of an object")
+
+![Alt text](src/main/resources/public/images/ScreenShot2.png?raw=true "Screen Shot of creating a bunch of instances of an object")
