@@ -2,6 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="hearthstone-api_main" target="1.8" />
+      <module name="hearthstone-api_test" target="1.8" />
       <module name="hearthstone_main" target="1.8" />
       <module name="hearthstone_test" target="1.8" />
     </bytecodeTargetLevel>

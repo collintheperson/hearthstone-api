@@ -20,7 +20,7 @@ public interface RarityDao {
     Rarity findById(int id);
     //    List<Rarity> findAllCardsByRarity(int rarityId);
     //update
-    void update(int id, int mana, int attack, int health);
+//    void update(int id, int mana, int attack, int health);
 
     //delete
     void deleteById(int id);

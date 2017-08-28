@@ -54,19 +54,19 @@ public class Sql2oRarityDao implements RarityDao {
                     .executeAndFetchFirst(Rarity.class);
         }
     }
-    @Override
-    public void update ( int mana, String cardDetail, int id) {
-        String sql = "UPDATE rarity SET( mana, carddetail) = (:mana, :cardDetail) WHERE id=:id";
-        try (Connection con = sql2o.open()) {
-            con.createQuery(sql)
-                    .addParameter("mana", mana)
-                    .addParameter("carddetail",cardDetail)
-                    .addParameter("id",id)
-                    .executeUpdate();
-        }   catch (Sql2oException ex)  {
-            System.out.println(ex);
-        }
-    }
+//    @Override
+//    public void update ( int mana, String cardDetail, int id) {
+//        String sql = "UPDATE rarity SET( mana, carddetail) = (:mana, :cardDetail) WHERE id=:id";
+//        try (Connection con = sql2o.open()) {
+//            con.createQuery(sql)
+//                    .addParameter("mana", mana)
+//                    .addParameter("carddetail",cardDetail)
+//                    .addParameter("id",id)
+//                    .executeUpdate();
+//        }   catch (Sql2oException ex)  {
+//            System.out.println(ex);
+//        }
+//    }
     @Override
     public void deleteById(int id)  {
         try ( Connection con = sql2o.open())    {
