@@ -79,4 +79,4 @@ public class Sql2oRarityDao implements RarityDao {
     }
 }
 
-}
+

@@ -1,0 +1,11 @@
+
+For the cardtexts/new path
+{
+	"attack": "5",
+	"health": "4",
+	"mana":"6",
+	"classtype":"warrior",
+	"name":"gromish warleader",
+	"carddetail": "One of the great commanders of the horde"
+
+}

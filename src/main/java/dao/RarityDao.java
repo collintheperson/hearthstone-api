@@ -4,9 +4,7 @@ import models.Rarity;
 
 import java.util.List;
 
-/**
- * Created by Guest on 8/25/17.
- */
+
 public interface RarityDao {
     //create
     void  add(Rarity rarity);
@@ -26,4 +24,4 @@ public interface RarityDao {
     void deleteById(int id);
 
 }
-}
+
