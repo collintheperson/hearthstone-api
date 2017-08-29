@@ -81,24 +81,24 @@ public class Sql2oCardTextDaoTest {
         assertEquals(0,cardTextDao.getAll().size());
     }
 
-    @Test
-    public void addRarityToCardTextAddsTypeCorrectly() throws Exception {
-
-        Rarity testCard1 = new Rarity(2,"a","b","b","legendary");
-        Rarity testCard2 = new Rarity(3,"b","f","g","epic");
-
-        rarityDao.add(testCard1);
-        rarityDao.add(testCard2);
-
-        CardText cardText1 = setUpNewCard();
-
-        cardTextDao.add(cardText1);
-
-        cardTextDao.addCardTextToRarity(cardText1, testCard1);
-        cardTextDao.addCardTextToRarity(cardText1, testCard2);
-
-        assertEquals(2, rarityDao.getAllCardTextsForARarity(cardText1.getId()).size());
-    }
+//    @Test
+//    public void addRarityToCardTextAddsTypeCorrectly() throws Exception {
+//
+//        Rarity testCard1 = new Rarity(2,"a","b","b","legendary");
+//        Rarity testCard2 = new Rarity(3,"b","f","g","epic");
+//
+//        rarityDao.add(testCard1);
+//        rarityDao.add(testCard2);
+//
+//        CardText cardText1 = setUpNewCard();
+//
+//        cardTextDao.add(cardText1);
+//
+//        cardTextDao.addCardTextToRarity(cardText1, testCard1);
+//        cardTextDao.addCardTextToRarity(cardText1, testCard2);
+//
+//        assertEquals(2, rarityDao.getAllCardTextsForARarity(cardText1.getId()).size());
+//    }
     //helper methods
     public static CardText setUpNewCard ()  {
         return new CardText(2,"a","b","Labrapriest",2,5);

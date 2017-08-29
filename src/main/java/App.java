@@ -31,7 +31,6 @@ public class App {
 
         //CREATE
         post("/cardtexts/new", "application/json", (req, res) -> {
- //           res.type("application/json");
             CardText cardText = gson.fromJson(req.body(), CardText.class);
             cardTextDao.add(cardText);
             res.status(201);
@@ -39,20 +38,23 @@ public class App {
         });
         //READ
         get("/cardtexts", "application/json", (req, res) -> {
- //           res.type("application/json");
             return gson.toJson(cardTextDao.getAll());//send it back to be displayed
         });
 
         get("/cardtexts/:id", "application/json", (req, res) -> {
-  //          res.type("application/json");
             int cardTextId = Integer.parseInt(req.params("id"));
             CardText cardToFind = cardTextDao.findById(cardTextId);
             if (cardToFind == null){
                 throw new RuntimeException(String.format("No card with the id: %s exists", req.params("id")));
             }
-   //         res.type("application/json");
             return gson.toJson(cardTextDao.findById(cardTextId));
         });
+
+        //update
+        post("/cardtexts/:id/update", "application/json", (request, response) -> {
+            int cardTextId = Integer.parseInt(request.params("id"));
+            
+                }
 
         //filter
 

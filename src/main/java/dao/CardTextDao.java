@@ -10,7 +10,7 @@ public interface CardTextDao {
     //create
     void  add(CardText cardtext);
 
-    void addCardTextToRarity(CardText cardtext, Rarity rarity);
+//    void addCardTextToRarity(CardText cardtext, Rarity rarity);
 
     //read
     List<CardText> getAll();
