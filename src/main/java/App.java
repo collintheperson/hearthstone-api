@@ -54,11 +54,18 @@ public class App {
         post("/cardtexts/:id/update", "application/json", (request, response) -> {
             int cardTextId = Integer.parseInt(request.params("id"));
             CardText cardText = gson.fromJson(request.body(), CardText.class);
-            cardTextDao.update(cardText.getAttack,cardText.getHealth,cardText.getMana,cardTextId);
-            res.status(201);
-            return gson.toJson(cardAttack);
+            cardTextDao.update(cardText.getAttack(),cardText.getHealth(),cardText.getMana(),cardTextId);
+            response.status(201);
+            return gson.toJson(cardText);
 
                 });
+
+        //delete
+        get("/cardtexts/:id/delete", "application/json", (req, res) -> {
+            int cardtextId = Integer.parseInt(req.params("id"));
+            cardTextDao.deleteById(cardtextId);
+            return cardtextId;
+        });
 
         //filter
 
