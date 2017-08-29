@@ -4,6 +4,7 @@ import dao.Sql2oCardTextDao;
 import dao.Sql2oRarityDao;
 import exceptions.ApiException;
 import models.CardText;
+import models.Rarity;
 import org.sql2o.Sql2o;
 import org.sql2o.Connection;
 
@@ -65,6 +66,44 @@ public class App {
             int cardtextId = Integer.parseInt(req.params("id"));
             cardTextDao.deleteById(cardtextId);
             return cardtextId;
+        });
+
+        //CREATE
+        post("/rarities/new", "application/json", (req, res) -> {
+            Rarity rarity = gson.fromJson(req.body(), Rarity.class);
+            rarityDao.add(rarity);
+            res.status(201);
+            return gson.toJson(rarity);
+        });
+        //READ
+        get("/rarities", "application/json", (req, res) -> {
+            return gson.toJson(rarityDao.getAll());
+        });
+
+        get("/rarities/:id", "application/json", (req, res) -> {
+            int rarityId = Integer.parseInt(req.params("id"));
+            Rarity cardToFind = rarityDao.findById(rarityId);
+            if (cardToFind == null){
+                throw new RuntimeException(String.format("No card with the id: %s exists", req.params("id")));
+            }
+            return gson.toJson(rarityDao.findById(rarityId));
+        });
+
+        //update
+        post("/rarities/:id/update", "application/json", (request, response) -> {
+            int rarityId = Integer.parseInt(request.params("id"));
+            Rarity rarity = gson.fromJson(request.body(), Rarity.class);
+            rarityDao.update(rarityId,rarity.getMana(),rarity.getCardDetail());
+            response.status(201);
+            return gson.toJson(rarity);
+
+        });
+
+        //delete
+        get("/rarities/:id/delete", "application/json", (req, res) -> {
+            int rarityId = Integer.parseInt(req.params("id"));
+            rarityDao.deleteById(rarityId);
+            return rarityId;
         });
 
         //filter
