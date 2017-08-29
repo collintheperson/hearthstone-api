@@ -94,6 +94,15 @@ public class Sql2oRarityDaoTest {
 
         assertEquals(2, rarityDao.getAllCardTextsForARarity(testRarity.getId()).size());
     }
+    @Test
+    public void RarityIdIsReturnedCorrectly() throws Exception {
+        Rarity rarity = setUpNewSpell();
+        int originalId = rarity.getCardTextId();
+        rarityDao.add(rarity);
+        assertEquals(originalId, rarityDao.findById(rarity.getId()).getCardTextId());
+    }
+
+
 
 
     //helper method

@@ -5,6 +5,7 @@ package models;
  */
 public class Rarity extends Characteristics {
     private String typeRarity;
+    private int cardTextId;
     public Rarity(int mana, String classType, String cardDetail, String name, String typeRarity) {
         super(mana, classType, cardDetail, name);
         this.typeRarity=  typeRarity;
@@ -18,6 +19,14 @@ public class Rarity extends Characteristics {
         this.typeRarity = typeRarity;
     }
 
+    public int getCardTextId() {
+        return cardTextId;
+    }
+
+    public void setCardTextId(int cardTextId) {
+        this.cardTextId = cardTextId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -26,6 +35,7 @@ public class Rarity extends Characteristics {
 
         Rarity rarity = (Rarity) o;
 
+        if (cardTextId != rarity.cardTextId) return false;
         return typeRarity.equals(rarity.typeRarity);
     }
 
@@ -33,6 +43,7 @@ public class Rarity extends Characteristics {
     public int hashCode() {
         int result = super.hashCode();
         result = 31 * result + typeRarity.hashCode();
+        result = 31 * result + cardTextId;
         return result;
     }
 }

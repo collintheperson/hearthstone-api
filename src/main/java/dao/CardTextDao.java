@@ -13,7 +13,8 @@ public interface CardTextDao {
 
     //read
     List<CardText> getAll();
-    List<Rarity> findAllCardtextsByRarity(int cardtextId);
+
+//    List<CardText> findAllRaritiesByCardText(int cardTextId);
 
     //find
     CardText findById(int id);

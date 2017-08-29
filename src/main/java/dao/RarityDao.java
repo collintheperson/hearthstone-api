@@ -9,12 +9,12 @@ import java.util.List;
 public interface RarityDao {
     //create
     void  add(Rarity rarity);
-//    void addRarityToCardText(Rarity rarity, CardText cardtext); // E
+    void addRarityToCardText(Rarity rarity, CardText cardtext); // E
 
     //read
     List<Rarity> getAll();
 
-    List<CardText> getAllCardTextsForARarity(int rarityId); //E we will implement this NOW :)
+    List<Rarity> getAllCardTextsForARarity(int rarityid); //E we will implement this NOW :)
 
 
     //find

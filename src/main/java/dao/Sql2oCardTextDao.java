@@ -85,9 +85,24 @@ public class Sql2oCardTextDao implements CardTextDao {
 ////do stuff here.
 //    }
 
-    @Override
-    public  List<Rarity> findAllCardtextsByRarity(int cardTextId){
-        List<Rarity> rarity = new ArrayList();
-        return rarity;
-    }
+//    @Override
+//    List<CardText> findAllRaritiesByCardText(int cardTextId);
+//        List<CardText> cardTexts = new ArrayList<>();
+//        String query = "SELECT cardtextid FROM cardtext_rarity WHERE rarityid = :rarityid";
+//        try(Connection con =sql2o.open()){
+//            List<Integer> allCardTextId = con.createQuery(query)
+//                    .addParameter("cardTexts", cardTexts)
+//                    .executeAndFetch(Integer.class);
+//            for (Integer cardTextsId : allCardTextId) {
+//                String query2 = "SELECT * from cardtext WHERE cardtextid = :cardtextid";
+//                cardTexts.add(
+//                        con.createQuery(query2)
+//                                .addParameter("cardTextId", rarity)
+//                                .executeAndFetchFirst(Rarity.class));
+//            }
+//        }catch(Sql2oException e) {
+//            System.out.println(e);
+//        }
+//        return cardTexts;
+//    }
 }

@@ -6,6 +6,7 @@ package models;
 public class CardText extends Characteristics {
     private int attack;
     private int health;
+    private int rarityId;
 
     public CardText(int mana, String classType, String cardDetail, String name, int attack, int health) {
         super(mana, classType, cardDetail, name);
@@ -24,9 +25,16 @@ public class CardText extends Characteristics {
     public void setAttack(int attack) {
         this.attack = attack;
     }
-
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public int getRarityId() {
+        return rarityId;
+    }
+
+    public void setRarityId(int rarityId) {
+        this.rarityId = rarityId;
     }
 
     @Override
@@ -38,7 +46,8 @@ public class CardText extends Characteristics {
         CardText cardText = (CardText) o;
 
         if (attack != cardText.attack) return false;
-        return health == cardText.health;
+        if (health != cardText.health) return false;
+        return rarityId == cardText.rarityId;
     }
 
     @Override
@@ -46,6 +55,7 @@ public class CardText extends Characteristics {
         int result = super.hashCode();
         result = 31 * result + attack;
         result = 31 * result + health;
+        result = 31 * result + rarityId;
         return result;
     }
 }
