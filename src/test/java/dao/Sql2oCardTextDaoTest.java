@@ -98,7 +98,7 @@ public class Sql2oCardTextDaoTest {
         cardTextDao.addCardTextToRarity(testCardText,testRarity);
         cardTextDao.addCardTextToRarity(testCardText,otherRarity);
 
-        Rarity[] foodtypes = {testRarity, otherRarity}; 
+        Rarity[] foodtypes = {testRarity, otherRarity};
 
         assertEquals(cardTextDao.getAllRaritysForACardText(testCardText.getId()), Arrays.asList(foodtypes));
     }
