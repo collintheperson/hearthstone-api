@@ -84,7 +84,7 @@ public class Sql2oCardTextDao implements CardTextDao {
 //    public void addCardTextToRarity(CardText cardtext, Rarity rarity);{
 ////do stuff here.
 //    }
-
+//
 //    @Override
 //    List<CardText> findAllRaritiesByCardText(int cardTextId);
 //        List<CardText> cardTexts = new ArrayList<>();
