@@ -99,7 +99,7 @@ public class Sql2oRarityDao implements RarityDao {
         String query = "SELECT rarityid FROM cardtext_rarity WHERE cardtextid = :cardtextid";
         try(Connection con =sql2o.open()){
             List<Integer> allRarityId = con.createQuery(query)
-                    .addParameter("rarityid", rarityid)
+                    .addParameter("rarities", rarites)
                     .executeAndFetch(Integer.class);
             for (Integer cardTextId : allRarityId) {
                 String query2 = "SELECT * from rarity WHERE rarityid = :rarityId";
