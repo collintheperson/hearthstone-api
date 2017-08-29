@@ -53,8 +53,12 @@ public class App {
         //update
         post("/cardtexts/:id/update", "application/json", (request, response) -> {
             int cardTextId = Integer.parseInt(request.params("id"));
-            
-                }
+            CardText cardText = gson.fromJson(request.body(), CardText.class);
+            cardTextDao.update(cardText.getAttack,cardText.getHealth,cardText.getMana,cardTextId);
+            res.status(201);
+            return gson.toJson(cardAttack);
+
+                });
 
         //filter
 
