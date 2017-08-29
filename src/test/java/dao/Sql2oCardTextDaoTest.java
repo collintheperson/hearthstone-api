@@ -9,6 +9,7 @@ import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -82,6 +83,24 @@ public class Sql2oCardTextDaoTest {
         int idToDelete = test1.getId();
         cardTextDao.deleteById(idToDelete);
         assertEquals(0,cardTextDao.getAll().size());
+    }
+
+    @Test
+    public void getAllRarityForACardTextReturnsRaritysCorrectly() throws Exception {
+        Rarity testRarity  = new Rarity(1,"priest","its a beast","legsDude","epic");
+        rarityDao.add(testRarity);
+
+        Rarity otherRarity  = new Rarity(3,"warlock","gahhh","the armed pirate","common");
+        rarityDao.add(otherRarity);
+
+        CardText testCardText = setUpNewCard();
+        cardTextDao.add(testCardText);
+        cardTextDao.addCardTextToRarity(testCardText,testRarity);
+        cardTextDao.addCardTextToRarity(testCardText,otherRarity);
+
+        Rarity[] foodtypes = {testRarity, otherRarity}; 
+
+        assertEquals(cardTextDao.getAllRaritysForACardText(testCardText.getId()), Arrays.asList(foodtypes));
     }
 
 
