@@ -23,3 +23,11 @@ CREATE TABLE IF NOT EXISTS cardtext_rarity (
  cardtextid INTEGER,
  rarityid INTEGER
 );
+
+CREATE TABLE IF NOT EXISTS description (
+    descriptionid int PRIMARY KEY auto_increment,
+    mana VARCHAR,
+    classtype VARCHAR,
+    name VARCHAR,
+    carddetail VARCHAR
+);

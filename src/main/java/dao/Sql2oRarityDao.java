@@ -113,6 +113,27 @@ public class Sql2oRarityDao implements RarityDao {
         }
         return rarites;
     }
+//    @Override
+//    public List<Rarity> getAllRaritysForCards(int rarityid) {
+//        ArrayList<Rarity>  rarityTypes = new ArrayList<>();
+//
+//        String joinQuery = "SELECT rarityid FROM cardtext_rarity WHERE cardtextid = :cardTextId";
+//
+//        try (Connection con = sql2o.open()) {
+//            List<Integer> allRarityIds = con.createQuery(joinQuery)
+//                    .addParameter("rarityid", rarityid)
+//                    .executeAndFetch(Integer.class);
+//            for (Integer rarityId : allRarityIds){
+//                String Query = "SELECT * FROM rarity WHERE rarityid = :rarityid";
+//                rarityTypes.add(
+//                        con.createQuery(Query)
+//                                .addParameter("rarityId", rarityId)
+//                                .executeAndFetchFirst(Rarity.class));
+//            }
+//        } catch (Sql2oException ex){
+//            System.out.println(ex);
+//        }
+//        return rarityTypes;
 }
 
 

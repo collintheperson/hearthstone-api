@@ -1,6 +1,7 @@
 package dao;
 
 import models.CardText;
+import models.Rarity;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,8 @@ import static org.junit.Assert.*;
 public class Sql2oCardTextDaoTest {
 
     private Sql2oCardTextDao cardTextDao;
+    private Sql2oRarityDao rarityDao;
+
     private Connection conn;
 
 
@@ -23,6 +26,8 @@ public class Sql2oCardTextDaoTest {
         String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString,"","");
         cardTextDao = new Sql2oCardTextDao(sql2o);
+        rarityDao = new Sql2oRarityDao(sql2o);
+
         conn = sql2o.open();
 
     }
@@ -76,7 +81,24 @@ public class Sql2oCardTextDaoTest {
         assertEquals(0,cardTextDao.getAll().size());
     }
 
+    @Test
+    public void addRarityToCardTextAddsTypeCorrectly() throws Exception {
 
+        Rarity testCard1 = new Rarity(2,"a","b","b","legendary");
+        Rarity testCard2 = new Rarity(3,"b","f","g","epic");
+
+        rarityDao.add(testCard1);
+        rarityDao.add(testCard2);
+
+        CardText cardText1 = setUpNewCard();
+
+        cardTextDao.add(cardText1);
+
+        cardTextDao.addCardTextToRarity(cardText1, testCard1);
+        cardTextDao.addCardTextToRarity(cardText1, testCard2);
+
+        assertEquals(2, rarityDao.getAllCardTextsForARarity(cardText1.getId()).size());
+    }
     //helper methods
     public static CardText setUpNewCard ()  {
         return new CardText(2,"a","b","Labrapriest",2,5);

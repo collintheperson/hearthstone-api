@@ -9,13 +9,13 @@ import java.util.List;
 public interface CardTextDao {
     //create
     void  add(CardText cardtext);
-//       void addCardTextToRarity(CardText cardtext, Rarity rarity);
+
+    void addCardTextToRarity(CardText cardtext, Rarity rarity);
 
     //read
     List<CardText> getAll();
 
-//    List<CardText> findAllRaritiesByCardText(int cardTextId);
-
+    List<Rarity> getAllRaritysForCards(int rarityid);
     //find
     CardText findById(int id);
 
