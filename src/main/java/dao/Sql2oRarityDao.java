@@ -85,18 +85,30 @@ public class Sql2oRarityDao implements RarityDao {
         }
     }
 
+//    @Override
+//    public void addRarityToCardText(Rarity rarity, CardText cardText) {
+//        String query = "INSERT INTO cardtext_rarity(rarityId, cardTextId) VALUES (:rarityId, :cardTextId)";
+//        try (Connection con = sql2o.open()) {
+//            con.createQuery(query)
+//                    .addParameter("rarityId", rarity.getId())
+//                    .addParameter("cardTextId", cardText.getId())
+//                    .executeUpdate();
+//        } catch (Sql2oException e) {
+//            System.out.println(e);
+//        }
+//    }
+
     @Override
-    public void addRarityToCardText(Rarity rarity, CardText cardText) {
-        String query = "INSERT INTO cardtext_rarity(rarityId, cardTextId) VALUES (:rarityId, :cardTextId)";
-        try (Connection con = sql2o.open()) {
-            con.createQuery(query)
-                    .addParameter("rarityId", rarity.getId())
-                    .addParameter("cardTextId", cardText.getId())
-                    .executeUpdate();
-        } catch (Sql2oException e) {
-            System.out.println(e);
-        }
+    public void addRarityToCardText(Rarity rarity, CardText cardText){
+        //do stuff here.
     }
+
+    @Override
+    public List<CardText> getAllCardTextsForARarity(int rarityId) {
+        List<CardText> cardText = new ArrayList();
+        return cardText;
+    }
+
 
 
 //    @Override
@@ -120,28 +132,28 @@ public class Sql2oRarityDao implements RarityDao {
 //        return rarites;
 //    }
 
-    @Override
-    public List<Rarity> getAllCardTextsForARarity(int rarityid) {
-        ArrayList<Rarity> rarityTypes = new ArrayList<>();
-
-        String joinQuery = "SELECT rarityid FROM cardtext_rarity WHERE cardtextid = :cardTextId";
-
-        try (Connection con = sql2o.open()) {
-            List<Integer> allRarityIds = con.createQuery(joinQuery)
-                    .addParameter("rarityid", rarityid)
-                    .executeAndFetch(Integer.class);
-            for (Integer rarityId : allRarityIds) {
-                String Query = "SELECT * FROM rarity WHERE rarityid = :rarityid";
-                rarityTypes.add(
-                        con.createQuery(Query)
-                                .addParameter("rarityId", rarityId)
-                                .executeAndFetchFirst(Rarity.class));
-            }
-        } catch (Sql2oException ex) {
-            System.out.println(ex);
-        }
-        return rarityTypes;
-    }
+//    @Override
+//    public List<Rarity> getAllCardTextsForARarity(int rarityid) {
+//        ArrayList<Rarity> rarityTypes = new ArrayList<>();
+//
+//        String joinQuery = "SELECT rarityid FROM cardtext_rarity WHERE cardtextid = :cardTextId";
+//
+//        try (Connection con = sql2o.open()) {
+//            List<Integer> allRarityIds = con.createQuery(joinQuery)
+//                    .addParameter("rarityid", rarityid)
+//                    .executeAndFetch(Integer.class);
+//            for (Integer rarityId : allRarityIds) {
+//                String Query = "SELECT * FROM rarity WHERE rarityid = :rarityid";
+//                rarityTypes.add(
+//                        con.createQuery(Query)
+//                                .addParameter("rarityId", rarityId)
+//                                .executeAndFetchFirst(Rarity.class));
+//            }
+//        } catch (Sql2oException ex) {
+//            System.out.println(ex);
+//        }
+//        return rarityTypes;
+//    }
 }
 
 

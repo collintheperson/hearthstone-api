@@ -8,6 +8,9 @@ import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -76,21 +79,21 @@ public class Sql2oRarityDaoTest {
         assertEquals(0,rarityDao.getAll().size());
     }
 
-    @Test
-    public void addRarityToCardTextAddsTypeCorrectly() throws Exception {
+@Test
+    public void addFoodTypeToCardTextAddsTypeCorrectly() throws Exception {
 
-        CardText testCard1 = new CardText(2,"a","b","b",5,4);
-        CardText testCard2 = new CardText(3,"b","f","g",4,2);
+        CardText testCardText = new CardText(4,"warlock","green","wizard",4,6);
+        CardText altCardText = new CardText(8,"priest","blue","looloo",4,10);
 
-        cardTextDao.add(testCard1);
-        cardTextDao.add(testCard2);
+        cardTextDao.add(testCardText);
+        cardTextDao.add(altCardText);
 
         Rarity testRarity = setUpNewSpell();
 
         rarityDao.add(testRarity);
 
-        rarityDao.addRarityToCardText(testRarity, testCard1);
-        rarityDao.addRarityToCardText(testRarity, testCard2);
+        rarityDao.addRarityToCardText(testRarity, testCardText);
+        rarityDao.addRarityToCardText(testRarity, altCardText);
 
         assertEquals(2, rarityDao.getAllCardTextsForARarity(testRarity.getId()).size());
     }
@@ -101,6 +104,7 @@ public class Sql2oRarityDaoTest {
         rarityDao.add(rarity);
         assertEquals(originalId, rarityDao.findById(rarity.getId()).getCardTextId());
     }
+
 
 
 

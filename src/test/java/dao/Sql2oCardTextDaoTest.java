@@ -8,6 +8,9 @@ import org.junit.Test;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -81,6 +84,8 @@ public class Sql2oCardTextDaoTest {
         assertEquals(0,cardTextDao.getAll().size());
     }
 
+
+
 //    @Test
 //    public void addRarityToCardTextAddsTypeCorrectly() throws Exception {
 //
@@ -98,7 +103,7 @@ public class Sql2oCardTextDaoTest {
 //        cardTextDao.addCardTextToRarity(cardText1, testCard2);
 //
 //        assertEquals(2, rarityDao.getAllCardTextsForARarity(cardText1.getId()).size());
-//    }
+////    }
     //helper methods
     public static CardText setUpNewCard ()  {
         return new CardText(2,"a","b","Labrapriest",2,5);

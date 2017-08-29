@@ -15,7 +15,8 @@ public interface RarityDao {
     //read
     List<Rarity> getAll();
 
-    List<Rarity> getAllCardTextsForARarity(int rarityid);
+
+    List<CardText> getAllCardTextsForARarity(int rarityId);
 
     //find
     Rarity findById(int id);
