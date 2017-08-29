@@ -1,11 +1,13 @@
 package dao;
 
+import models.CardText;
 import models.Characteristics;
 import models.Rarity;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,17 +20,17 @@ public class Sql2oRarityDao implements RarityDao {
 
     @Override
     public void add (Rarity rarity) {
-        String sql = "INSERT INTO rarity ( mana, classtype, name, carddetail, typerarity) VALUES (:attack, :health, :mana, :classType, :name, :cardDetail, typeRarity)";
+        String sql = "INSERT INTO rarity ( mana, classtype, name, carddetail, typerarity) VALUES ( :mana, :classType, :name, :cardDetail, :typeRarity)";
         try (Connection con = sql2o.open()) {
             int id = (int) con.createQuery(sql)
                     .addParameter("mana", rarity.getMana())
-                    .addParameter("classType", rarity.getClassType())
                     .addParameter("name", rarity.getName())
+                    .addParameter("classType", rarity.getClassType())
                     .addParameter("cardDetail", rarity.getCardDetail())
                     .addParameter("typeRarity",rarity.getTypeRarity())
                     .addColumnMapping("MANA","mana")
-                    .addColumnMapping("CLASSTYPE", "classtype")
                     .addColumnMapping("NAME", "name")
+                    .addColumnMapping("CLASSTYPE", "classType")
                     .addColumnMapping("CARDDETAIL","cardDetail")
                     .addColumnMapping("TYPERARITY","typeRarity")
                     .executeUpdate()
@@ -54,19 +56,19 @@ public class Sql2oRarityDao implements RarityDao {
                     .executeAndFetchFirst(Rarity.class);
         }
     }
-//    @Override
-//    public void update ( int mana, String cardDetail, int id) {
-//        String sql = "UPDATE rarity SET( mana, carddetail) = (:mana, :cardDetail) WHERE id=:id";
-//        try (Connection con = sql2o.open()) {
-//            con.createQuery(sql)
-//                    .addParameter("mana", mana)
-//                    .addParameter("carddetail",cardDetail)
-//                    .addParameter("id",id)
-//                    .executeUpdate();
-//        }   catch (Sql2oException ex)  {
-//            System.out.println(ex);
-//        }
-//    }
+    @Override
+    public void update (int id, int mana, String cardDetail ) {
+        String sql = "UPDATE rarity SET( mana, carddetail) = (:mana, :cardDetail) WHERE id=:id";
+        try (Connection con = sql2o.open()) {
+            con.createQuery(sql)
+                    .addParameter("mana", mana)
+                    .addParameter("cardDetail",cardDetail)
+                    .addParameter("id",id)
+                    .executeUpdate();
+        }   catch (Sql2oException ex)  {
+            System.out.println(ex);
+        }
+    }
     @Override
     public void deleteById(int id)  {
         try ( Connection con = sql2o.open())    {
@@ -76,6 +78,16 @@ public class Sql2oRarityDao implements RarityDao {
         }   catch (Sql2oException ex)   {
             System.out.println(ex);
         }
+    }
+//    @Override
+//     void addRarityToCardText(Rarity rarity, CardText cardtext);{
+////do stuff here.
+//    }
+
+    @Override
+    public List<CardText> getAllCardTextsForARarity(int rarityId){
+        List<CardText> cardTexts = new ArrayList();
+        return cardTexts;
     }
 }
 

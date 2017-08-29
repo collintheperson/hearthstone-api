@@ -2,21 +2,22 @@ package dao;
 
 
 import models.CardText;
+import models.Rarity;
 
 import java.util.List;
 
 public interface CardTextDao {
     //create
     void  add(CardText cardtext);
-    //   void addCardTextToFoodType(CardText cardtext, Foodtype foodtype);
+//       void addCardTextToRarity(CardText cardtext, Rarity rarity);
 
-    //get all
+    //read
     List<CardText> getAll();
-
+    List<Rarity> findAllCardtextsByRarity(int cardtextId);
 
     //find
     CardText findById(int id);
-//    List<CardText> findAllCardsByCardText(int cardtextId);
+
     //update
    void update(int id, int mana, int attack, int health);
 

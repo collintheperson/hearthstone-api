@@ -1,6 +1,7 @@
 import com.google.gson.Gson;
 import dao.CardTextDao;
 import dao.Sql2oCardTextDao;
+import dao.Sql2oRarityDao;
 import exceptions.ApiException;
 import models.CardText;
 import org.sql2o.Sql2o;
@@ -18,12 +19,14 @@ import static spark.Spark.*;
 public class App {
     public static void main(String[] args) {
         Sql2oCardTextDao cardTextDao;
+        Sql2oRarityDao rarityDao;
         Connection conn;
         Gson gson = new Gson();
 
         String connectionString = "jdbc:h2:~/hearthstone-api.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         cardTextDao = new Sql2oCardTextDao(sql2o);
+        rarityDao = new Sql2oRarityDao(sql2o);
         conn = sql2o.open();
 
         //CREATE

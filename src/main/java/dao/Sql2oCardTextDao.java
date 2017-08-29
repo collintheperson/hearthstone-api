@@ -2,10 +2,12 @@ package dao;
 
 import models.CardText;
 
+import models.Rarity;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -77,5 +79,15 @@ public class Sql2oCardTextDao implements CardTextDao {
         }   catch (Sql2oException ex)   {
             System.out.println(ex);
         }
+    }
+//    @Override
+//    public void addCardTextToRarity(CardText cardtext, Rarity rarity);{
+////do stuff here.
+//    }
+
+    @Override
+    public  List<Rarity> findAllCardtextsByRarity(int cardTextId){
+        List<Rarity> rarity = new ArrayList();
+        return rarity;
     }
 }
